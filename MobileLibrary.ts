@@ -11,6 +11,13 @@ export class MobileLibrary{
         this.mobiles = mobiles
         this.totalPrice = totalPrice
     }
+    public totalPriceCalculation():number{
+        let total: number = 0
+        this.mobiles.forEach(mobile => {
+            total += mobile.getPrice()
+        })
+        return total
+    }
     public getName(): string{
         return this.name
     }
@@ -36,3 +43,4 @@ export class MobileLibrary{
         this.totalPrice = totalPrice
     }
 }
+
