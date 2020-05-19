@@ -19,7 +19,7 @@ export class Mobile{
     }
     public print(){
         let text = 'The characteristics of the mobile ' + this.name + ' are:\nName: ' + this.name + '\nModel: ' + this.model + '\nTrademark: ' + this.trademark +
-        '\nSD Size (GB): ' + this.sdSize + '\nColor: ' + this.color + '\nIs 5g?: ' + this.is5G + '\nNumber of Cameras: ' + this.cameraNumber
+        '\nSD Size (GB): ' + this.sdSize + '\nColor: ' + this.color + '\nIs 5g?: ' + this.is5G + '\nNumber of Cameras: ' + this.cameraNumber 
         return text
     }
 
