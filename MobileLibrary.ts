@@ -5,13 +5,13 @@ export class MobileLibrary{
     private location: string
     private mobiles: Mobile[]
     private totalPrice: number
-    constructor(name: string, location: string, mobiles: Mobile[], totalPrice: number){
+    constructor(name: string, location: string, mobiles: Mobile[]){
         this.name = name
         this.location = location
         this.mobiles = mobiles
-        this.totalPrice = totalPrice
+        this.totalPrice = this.totalPriceCalculation()
     }
-    public totalPriceCalculation():number{
+    private totalPriceCalculation():number{
         let total: number = 0
         this.mobiles.forEach(mobile => {
             total += mobile.getPrice()
