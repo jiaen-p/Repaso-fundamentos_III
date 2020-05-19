@@ -11,7 +11,7 @@ export class MobileLibrary{
         this.mobiles = mobiles
         this.totalPrice = this.totalPriceCalculation()
     }
-    public totalPriceCalculation():number{
+    private totalPriceCalculation():number{
         for (let i = 0; i < this.mobiles.length; i++){
             this.totalPrice += this.mobiles[i].getPrice()
         }
@@ -49,5 +49,5 @@ let Samsung: Mobile = new Mobile('Samsung', 'Galaxy 10', 'Smsng', 64, 'withe', t
 
 let lib1: MobileLibrary = new MobileLibrary('libreiria 1', 'Spain', [Nokia, iPhone, Samsung])
 
-console.log(lib1.totalPriceCalculation());
+console.log(lib1.getTotalPrice());
 
