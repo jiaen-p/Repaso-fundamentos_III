@@ -44,7 +44,7 @@ export class Mobile{
     getCamNum(){
         return this.cameraNumber
     }
-    getPrice(){
+    public getPrice():number{
         return this.price
     }
     setName(name: string){
