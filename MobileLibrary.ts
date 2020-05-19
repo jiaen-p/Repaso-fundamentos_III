@@ -9,7 +9,13 @@ export class MobileLibrary{
         this.name = name
         this.location = location
         this.mobiles = mobiles
-        this.totalPrice = 0;
+        this.totalPrice = this.totalPriceCalculation()
+    }
+    public totalPriceCalculation():number{
+        for (let i = 0; i < this.mobiles.length; i++){
+            this.totalPrice += this.mobiles[i].getPrice()
+        }
+        return this.totalPrice;
     }
     public getName(): string{
         return this.name
@@ -35,12 +41,6 @@ export class MobileLibrary{
     public setTotalPrice(totalPrice: number){
         this.totalPrice = totalPrice
     }
-    public totalPriceCalculation():number{
-        for (let i = 0; i < this.mobiles.length; i++){
-            this.totalPrice += this.mobiles[i].getPrice()
-        }
-        return this.totalPrice;
-    }
 }
 
 let Nokia: Mobile = new Mobile('Nokia', '3210', 'NK', 64, 'blue', false, 2, 100);
@@ -50,3 +50,4 @@ let Samsung: Mobile = new Mobile('Samsung', 'Galaxy 10', 'Smsng', 64, 'withe', t
 let lib1: MobileLibrary = new MobileLibrary('libreiria 1', 'Spain', [Nokia, iPhone, Samsung])
 
 console.log(lib1.totalPriceCalculation());
+
